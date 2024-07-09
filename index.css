@@ -1,0 +1,196 @@
+body {
+    margin: 80px 40px;
+    font-family: "Karla", sans-serif;
+    background-color: #111111;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    background-color: #1F2937;
+    padding: 40px 40px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    box-shadow: 0px 0px 5px #55F991;    
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(.7);
+}
+
+.emoji {
+    font-size: 50px;
+    margin: 0 0 15px 0;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+}
+
+#sec-title {
+    color: #4ADF86;
+    text-shadow: 3px 3px #273549;
+}
+
+#sub-title {
+    margin: 10px 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+#pass-el {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 30px 0 20px 0; 
+    width: 185px;
+    background-color: #10B981;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 1px #111111;    
+}
+
+.generated-pass {
+    margin: 30px 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line {
+    border: 1.5px solid #273549;
+    margin: 0px px;
+}
+
+#gen-el1, #gen-el2 {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0 15px 15px 0;
+    width: 200px;
+    height: 35px;
+    background-color: #273549;
+    color: #55F991;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    box-shadow: 1px 1px #55F991;    
+}
+
+.reset-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+#reset-el {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    width: 185px;
+    background-color: #10B981;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 1px #111111; 
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px 20px 0;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #10B981;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.password-strength {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        width: 90%;
+        padding: 20px;
+    }
+    #pass-el, #reset-el, #gen-el1, #gen-el2 {
+        width: 100%;
+        font-size: 14px;
+    }
+    .generated-pass {
+        flex-direction: column;
+        align-items: center;
+    }
+    #gen-el1, #gen-el2 {
+        margin: 10px 0;
+    }
+}

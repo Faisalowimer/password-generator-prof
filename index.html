@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="emoji">🔒⛓️</h1>
+        <div class="text-container">
+            <h1 id="title">Generate a <br><span id="sec-title">random password</span></h1>
+            <p id="sub-title">Never use an insecure password again.</p>
+        </div>
+        <div class="input-container">
+            <button id="pass-el" onclick="generatePass()">Generate passwords</button>
+        </div>
+        <div class="options">
+            <label class="switch">
+                <input type="checkbox" id="include-symbols" checked>
+                <span class="slider round"></span>
+                <br>
+                <br>
+                <br>
+                Symbols
+            </label>
+            <label class="switch">
+                <input type="checkbox" id="include-numbers" checked>
+                <span class="slider round"></span>
+                <br>
+                <br>
+                <br>
+                Numbers
+            </label>
+            <label class="switch">
+                <input type="checkbox" id="include-uppercase" checked>
+                <span class="slider round"></span>
+                <br>
+                <br>
+                <br>
+                Uppercase
+            </label>
+            <label class="switch">
+                <input type="checkbox" id="include-lowercase" checked>
+                <span class="slider round"></span>
+                <br>
+                <br>
+                <br>
+                Lowercase
+            </label>
+        </div>
+        <hr class="line">
+        <div class="generated-pass">
+            <button id="gen-el1"></button>
+            <button id="gen-el2"></button>
+        </div>
+        <div class="password-strength" id="strength-el"></div>
+        <div class="reset-container">
+            <button id="reset-el" onclick="resetPasswords()">Reset passwords</button>
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
